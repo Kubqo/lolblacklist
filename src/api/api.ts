@@ -2,7 +2,7 @@ import { ProfileCoreStructure } from "../types/enums";
 
 const riotApiPrefix = (region: string) =>
   `https://${region}.api.riotgames.com/`;
-const riotApiKey = "RGAPI-315b9b59-65c0-4ead-993a-9c5d055494b2";
+const riotApiKey = process.env.REACT_APP_RIOT_API_KEY;
 
 const getAccountByRiotId = (nick: string) =>
   `lol/summoner/v4/summoners/by-name/${nick}?api_key=${riotApiKey}`;
